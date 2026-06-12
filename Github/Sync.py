@@ -1,7 +1,5 @@
-import subprocess
+class Sync:
 
-def update():
+    def update(self):
 
-    subprocess.run(
-        ["git", "pull"]
-    )
+        print("Checking GitHub repositories...")
