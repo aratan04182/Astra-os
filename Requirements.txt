@@ -1,0 +1,7 @@
+gitpython
+requests
+ollama
+chromadb
+sentence-transformers
+fastapi
+uvicorn
