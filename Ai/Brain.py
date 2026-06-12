@@ -1,12 +1,21 @@
+from ai.thinker import Thinker
+from ai.summarizer import Summarizer
+from ai.memory_manager import MemoryManager
+
 class Brain:
 
     def __init__(self):
 
-        self.name = "AstraAI"
-        self.version = "0.1"
+        self.thinker = Thinker()
+        self.summarizer = Summarizer()
+        self.memory = MemoryManager()
 
-    def run(self):
+    def process(self, text):
 
-        print(
-            f"{self.name} Version {self.version} Running..."
-        )
+        idea = self.thinker.analyze(text)
+
+        summary = self.summarizer.create(idea)
+
+        self.memory.store(summary)
+
+        return summary
