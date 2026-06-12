@@ -1,28 +1,13 @@
-from ai.brain import Brain
-from ai.assistant import Assistant
+from agent.manager import Agent
 
-brain = Brain()
-
-assistant = Assistant()
+agent = Agent()
 
 while True:
 
-    command = input(">>> ")
+    goal = input("> ")
 
-    if command.startswith("learn "):
-
-        text = command.replace("learn ", "")
-
-        brain.learn_text(text)
-
-        print("learnt!!")
-
-    elif command.startswith("ask "):
-
-        question = command.replace("ask ", "")
-
-        print(assistant.ask(question))
-
-    elif command == "exit":
+    if goal == "exit":
 
         break
+
+    print(agent.run(goal))
