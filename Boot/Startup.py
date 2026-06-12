@@ -1,16 +1,9 @@
-import time
-from ai.brain import Brain
+from core.system import System
 
-def start():
+def boot():
 
-    print("================================")
-    print(" AstraAI Booting...")
-    print("================================")
+    print("Starting AstraAI OS...")
 
-    brain = Brain()
+    system = System()
 
-    while True:
-
-        brain.run()
-
-        time.sleep(1)
+    system.start()
