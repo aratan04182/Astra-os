@@ -14,6 +14,6 @@ class Assistant:
 
         if len(result) == 0:
 
-            return "知識がありません"
+            return "Sorry I dont know:"
 
         return result[:5]
