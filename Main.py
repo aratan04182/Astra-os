@@ -1,13 +1,5 @@
-from agent.manager import Agent
+from core.system import System
 
-agent = Agent()
+system = System()
 
-while True:
-
-    goal = input("> ")
-
-    if goal == "exit":
-
-        break
-
-    print(agent.run(goal))
+system.boot()
