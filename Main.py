@@ -1,4 +1,18 @@
-from boot.startup import start
+from ai.learner import Learner
+from ai.search import Search
 
-if __name__ == "__main__":
-    start()
+learner = Learner()
+
+learner.learn(
+    "https://github.com/pallets/flask.git"
+)
+
+assistant = Search()
+
+while True:
+
+    question = input("> ")
+
+    print(
+        assistant.ask(question)
+    )
