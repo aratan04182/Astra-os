@@ -1,9 +1,5 @@
-class Updater:
+class Inference:
 
-    def check(self):
+    def generate(self, prompt):
 
-        print("Checking GitHub...")
-
-    def update(self):
-
-        print("Knowledge Updated")
+        return "AI Response : " + prompt
