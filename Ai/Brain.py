@@ -1,21 +1,11 @@
-from ai.thinker import Thinker
-from ai.summarizer import Summarizer
-from ai.memory_manager import MemoryManager
+from ai.learner import Learner
 
 class Brain:
 
     def __init__(self):
 
-        self.thinker = Thinker()
-        self.summarizer = Summarizer()
-        self.memory = MemoryManager()
+        self.learner = Learner()
 
-    def process(self, text):
+    def learn_text(self, text):
 
-        idea = self.thinker.analyze(text)
-
-        summary = self.summarizer.create(idea)
-
-        self.memory.store(summary)
-
-        return summary
+        self.learner.learn(text)
