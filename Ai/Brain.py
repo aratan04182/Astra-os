@@ -1,11 +1,11 @@
-from ai.learner import Learner
-
 class Brain:
 
-    def __init__(self):
+    def initialize(self):
 
-        self.learner = Learner()
+        print("Brain Ready")
 
-    def learn_text(self, text):
+    def loop(self):
 
-        self.learner.learn(text)
+        command = input("> ")
+
+        print("Processing:", command)
