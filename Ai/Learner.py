@@ -1,21 +1,18 @@
-from github.collector import Collector
-from github.parser import Parser
-from memory.vector import save
+from ai.reasoning import Reasoning
+from ai.memory import Memory
 
 class Learner:
 
     def __init__(self):
 
-        self.collector = Collector()
+        self.reasoning = Reasoning()
 
-        self.parser = Parser()
+        self.memory = Memory()
 
-    def learn(self, repo):
+        self.memory.load()
 
-        folder = self.collector.clone(repo)
+    def learn(self, code):
 
-        texts = self.parser.read(folder)
+        result = self.reasoning.analyze(code)
 
-        for index, text in enumerate(texts):
-
-            save(text, index)
+        self.memory.add(str(result))
