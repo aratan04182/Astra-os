@@ -1,19 +1,17 @@
-from ai.brain import Brain
-from github.sync import Sync
-
 class System:
 
-    def __init__(self):
+    def boot(self):
 
-        self.brain = Brain()
-        self.github = Sync()
+        print("Loading AstraAI OS...")
+
+        self.load()
+
+        self.start()
+
+    def load(self):
+
+        print("Loading Modules")
 
     def start(self):
 
-        self.github.update()
-
-        self.brain.initialize()
-
-        while True:
-
-            self.brain.loop()
+        print("AI Ready")
