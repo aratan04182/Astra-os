@@ -1,18 +1,28 @@
-from ai.learner import Learner
-from ai.search import Search
+from ai.brain import Brain
+from ai.assistant import Assistant
 
-learner = Learner()
+brain = Brain()
 
-learner.learn(
-    "https://github.com/pallets/flask.git"
-)
-
-assistant = Search()
+assistant = Assistant()
 
 while True:
 
-    question = input("> ")
+    command = input(">>> ")
 
-    print(
-        assistant.ask(question)
-    )
+    if command.startswith("learn "):
+
+        text = command.replace("learn ", "")
+
+        brain.learn_text(text)
+
+        print("learnt!!")
+
+    elif command.startswith("ask "):
+
+        question = command.replace("ask ", "")
+
+        print(assistant.ask(question))
+
+    elif command == "exit":
+
+        break
