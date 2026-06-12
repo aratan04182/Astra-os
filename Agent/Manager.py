@@ -1,6 +1,5 @@
 from agent.planner import Planner
 from agent.executor import Executor
-from llm.model import LocalLLM
 
 class Agent:
 
@@ -10,12 +9,8 @@ class Agent:
 
         self.executor = Executor()
 
-        self.model = LocalLLM()
+    def execute(self, goal):
 
-    def run(self, goal):
+        plan = self.planner.create(goal)
 
-        plan = self.planner.create_plan(goal)
-
-        self.executor.execute(plan)
-
-        return self.model.generate(goal)
+        return self.executor.run(plan)
