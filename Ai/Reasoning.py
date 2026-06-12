@@ -1,27 +1,11 @@
 class Reasoning:
 
-    def analyze(self, code):
+    def think(self, question):
 
-        lines = code.split("\n")
+        return {
 
-        result = {
+            "question": question,
 
-            "lines": len(lines),
-
-            "imports": [],
-
-            "functions": []
+            "confidence": 0.90
 
         }
-
-        for line in lines:
-
-            if line.startswith("import"):
-
-                result["imports"].append(line)
-
-            if line.startswith("def"):
-
-                result["functions"].append(line)
-
-        return result
