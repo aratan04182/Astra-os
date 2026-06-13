@@ -1,49 +1,19 @@
-import tkinter as tk
+apps = [
 
-from ui.page import PAGE1
+("🤖","Chat"),
 
-class Home:
+("🌍","Browser"),
 
-    def __init__(self, root):
+("🛒","Store"),
 
-        frame = tk.Frame(root)
+("📚","Knowledge"),
 
-        frame.pack(expand=True)
+("📝","Notes"),
 
-        row = 0
+("🎵","Music"),
 
-        col = 0
+("📷","Camera"),
 
-        for icon,name in PAGE1:
+("⚙","Settings")
 
-            button = tk.Button(
-
-                frame,
-
-                text=f"{icon}\n{name}",
-
-                width=12,
-
-                height=5
-
-            )
-
-            button.grid(
-
-                row=row,
-
-                column=col,
-
-                padx=20,
-
-                pady=20
-
-            )
-
-            col += 1
-
-            if col == 4:
-
-                col = 0
-
-                row += 1
+]
