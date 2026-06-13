@@ -4,7 +4,7 @@ def boot():
 
     print("================================")
 
-    print("      AstraAI OS 1.0")
+    print("      AstraAI OS 3.0")
 
     print("================================")
 
