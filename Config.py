@@ -2,12 +2,8 @@ APP_NAME = "AstraAI OS"
 
 VERSION = "3.0 Alpha"
 
-SCREEN_WIDTH = 1280
+WIDTH = 1280
 
-SCREEN_HEIGHT = 800
+HEIGHT = 800
 
-THEME = "dark"
-
-AI_MODEL = "local"
-
-AUTO_UPDATE = True
+ICON_SIZE = 90
