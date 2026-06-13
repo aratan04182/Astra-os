@@ -1,5 +1,9 @@
-from core.system import System
+from boot.startup import boot
 
-system = System()
+def main():
 
-system.boot()
+    boot()
+
+if __name__ == "__main__":
+
+    main()
