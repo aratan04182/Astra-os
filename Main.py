@@ -1,9 +1,3 @@
-from boot.startup import boot
+from ui.launcher import Launcher
 
-def main():
-
-    boot()
-
-if __name__ == "__main__":
-
-    main()
+Launcher().start()
