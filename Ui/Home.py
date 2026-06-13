@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from ui.icons import apps
+from ui.page import PAGE1
 
 class Home:
 
@@ -11,9 +11,10 @@ class Home:
         frame.pack(expand=True)
 
         row = 0
+
         col = 0
 
-        for icon,name in apps:
+        for icon,name in PAGE1:
 
             button = tk.Button(
 
@@ -21,9 +22,9 @@ class Home:
 
                 text=f"{icon}\n{name}",
 
-                width=10,
+                width=12,
 
-                height=4
+                height=5
 
             )
 
@@ -41,8 +42,8 @@ class Home:
 
             col += 1
 
-            if col == 3:
-
-                row += 1
+            if col == 4:
 
                 col = 0
+
+                row += 1
