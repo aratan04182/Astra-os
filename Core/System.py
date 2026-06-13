@@ -1,17 +1,23 @@
+from ui.launcher import Launcher
+
 class System:
 
-    def boot(self):
+    def __init__(self):
 
-        print("Loading AstraAI OS...")
-
-        self.load()
-
-        self.start()
-
-    def load(self):
-
-        print("Loading Modules")
+        self.launcher = Launcher()
 
     def start(self):
 
-        print("AI Ready")
+        print("Loading System...")
+
+        self.launcher.home()
+
+        while True:
+
+            command = input("> ")
+
+            if command == "exit":
+
+                break
+
+            self.launcher.run(command)
