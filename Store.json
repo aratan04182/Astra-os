@@ -1,0 +1,29 @@
+[
+    {
+        "id": "browser",
+        "name": "Browser",
+        "version": "1.0",
+        "installed": true
+    },
+
+    {
+        "id": "notes",
+        "name": "Notes",
+        "version": "1.0",
+        "installed": false
+    },
+
+    {
+        "id": "music",
+        "name": "Music",
+        "version": "1.0",
+        "installed": false
+    },
+
+    {
+        "id": "camera",
+        "name": "Camera",
+        "version": "1.0",
+        "installed": false
+    }
+]
