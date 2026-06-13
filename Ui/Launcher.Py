@@ -1,41 +1,23 @@
+import tkinter as tk
+
+from ui.home import Home
+
+from ui.statusbar import StatusBar
+
+from config import WIDTH,HEIGHT
+
 class Launcher:
 
-    def __init__(self):
+    def start(self):
 
-        self.apps = {
+        root = tk.Tk()
 
-            "chat": "AI Chat",
+        root.title("AstraAI OS")
 
-            "browser": "Browser",
+        root.geometry(f"{WIDTH}x{HEIGHT}")
 
-            "store": "App Store",
+        StatusBar(root)
 
-            "terminal": "Terminal",
+        Home(root)
 
-            "files": "Files"
-
-        }
-
-    def home(self):
-
-        print()
-
-        print("📱 AstraAI Home")
-
-        print("----------------")
-
-        for app in self.apps:
-
-            print(app)
-
-        print()
-
-    def run(self, command):
-
-        if command in self.apps:
-
-            print("Opening", self.apps[command])
-
-        else:
-
-            print("Unknown App")
+        root.mainloop()
