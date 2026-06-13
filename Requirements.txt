@@ -1,7 +1,7 @@
-gitpython
-requests
-ollama
-chromadb
-sentence-transformers
 fastapi
 uvicorn
+requests
+gitpython
+chromadb
+ollama
+pillow
